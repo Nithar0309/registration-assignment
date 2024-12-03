@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body
+        {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-image: url(https://wallup.net/wp-content/uploads/2016/05/25/251395-pattern.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 900px;
+}
+.container{
+            background-color:white;
+            height: 900px;
+            width: 50%;
+            margin: auto;
+            border: #d61330 solid 1px;
+            border-radius: 50px;
+            padding-left: 10px;   
+        }
+h1{
+    text-align: center;
+}
+input[type="text"],
+input[type="password"],
+
+select
+{
+    outline: none;
+         border: none;
+         border-bottom: 1px solid blue;
+         font-size: 21px ;
+         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+         width: 98%;
+         color: black;
+         margin-top: 20px;
+}
+input[type="submit"]
+{
+    background-color:green;
+    width:150px;
+    height:50px;
+    border-radius:10px;
+    padding:10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+input[type="reset"]
+{
+    background-color: red;
+    width:150px;
+    height:50px;
+    border-radius:10px;
+    padding:10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+.error-message
+{
+    color:#d61330;
+}
+#month{
+    outline: none;
+         border: none;
+         border-bottom: 1px solid blue;
+         font-size: 21px ;
+         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+         width: 30%;
+         color: black;
+         margin-top: 10px;
+         float: left;
+         
+}
+#date{
+    outline: none;
+         border: none;
+         border-bottom: 1px solid blue;
+         font-size: 21px ;
+         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+         width: 30%;
+         color: black;
+         margin-top: 10px;
+         margin-left: 10px;
+         margin-bottom: 10px;
+         float: left;
+}
+#year{
+    outline: none;
+         border: none;
+         border-bottom: 1px solid blue;
+         font-size: 21px ;
+         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+         width: 30%;
+         color: black;
+         margin-top: 10px;
+         margin-left: 10px;
+}
+label{
+    font-size: 20px;
+    font-weight: bold;
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="col-md-12">    
+    <u><h1>Regitration Form</h1></u></div>
+    <form name="regform"  action="success.html" onsubmit="return validateForm()" class="row g-3 needs-validation">
+        <div class="col-md-12">
+        <p>
+            <u><label>Name</label></u>
+            <input type="text" id="name" name="name" value="" placeholder="Enter your name"/>
+            <span id="name-error" class="error-message"></span>
+        </p>
+        </div>
+        <div class="col-md-12">
+        <p>
+            <u><label>Email</label></u>
+            <input type="text" id="email" name="email" value="" placeholder="ex-myname@gmail.com"/>
+            <span id="email-error" class="error-message"></span>
+        </p>
+    </div>
+    <div class="col-md-12">
+        <p>
+           <u> <label>Password</label></u>
+            <input type="password" id="pwd" name="pwd" value="" placeholder="Enter your password" >
+            <span id="pwd-error" class="error-message"></span>
+        </p>
+        </div>
+        <div class="col-md-12">
+        <p>
+         <u><label>Qualification</label></u>
+            <select id="qual" name="Qualification">
+                <option></option>
+                <option>10th</option>
+                <option>12th</option>
+                <option>Diploma</option>
+                <option>BCOM</option>
+                <option>MCOM</option>
+                <option>BTECH</option>
+                <option>MTECH</option>
+                <option>BE</option>
+                <option>ME</option>
+                <option>BSC</option>
+                <option>MSC</option>
+
+            </select>
+            <span id="qual-error" class="error-message"></span>
+        </p>
+        </div>
+        <div class="col-md-4">
+        <u><p style="font-size: 20px; font-weight: bold;">Date of birth</p></u>
+            <p>
+               
+
+                <select id="month" name="monthofbirth" style="margin-bottom: 20px;">
+                    <option></option>
+                    <option>January</option>
+                    <option>February</option>
+                    <option>March</option>
+                    <option>April</option>
+                    <option>May</option>
+                    <option>June</option>
+                    <option>July</option>
+                    <option>August</option>
+                    <option>September</option>
+                    <option>October</option>
+                    <option>November</option>
+                    <option>December</option>
+                <select>
+               
+                
+            <select id="date" name="dateofbirth">
+            <option></option>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+            <option>6</option>
+            <option>7</option>
+            <option>8</option>
+            <option>9</option>
+            <option>10</option>
+            <option>11</option>
+            <option>12</option>
+            <option>13</option>
+            <option>14</option>
+            <option>15</option>
+            <option>16</option>
+            <option>17</option>
+            <option>18</option>
+            <option>19</option>
+            <option>20</option>
+            <option>21</option>
+            <option>22</option>
+            <option>23</option>
+            <option>24</option>
+            <option>25</option>
+            <option>26</option>
+            <option>27</option>
+            <option>28</option>
+            <option>29</option>
+            <option>30</option>
+            <option>31</option>
+        </select>
+       
+           <select id="year" name="yearofbirth">
+                <option></option>
+                <option>1975</option>
+                <option>1976</option>
+                <option>1977</option>
+                <option>1978</option>
+                <option>1979</option>   
+            <option>1980</option>
+            <option>1981</option>
+            <option>1982</option>
+            <option>1983</option>
+            <option>1984</option>
+            <option>1985</option>
+            <option>1986</option>
+            <option>1987</option>
+            <option>1988</option>
+            <option>1989</option>
+            <option>1990</option>
+            <option>1991</option>
+            <option>1992</option>
+            <option>1993</option>
+            <option>1994</option>
+            <option>1995</option>
+            <option>1996</option>
+            <option>1997</option>
+            <option>1998</option>
+            <option>1999</option>
+            <option>2000</option>
+            <option>2001</option>
+            <option>2002</option>
+            <option>2003</option>
+            <option>2004</option>
+            <option>2005</option>
+            <option>2006</option>
+            
+            </select>
+            <div class="col-md-12">
+            <p>
+            <span id="year-error" class="error-message"></span>
+            <span id="month-error" class="error-message"></span>
+            <span id="date-error" class="error-message"></span>
+        </p>
+        </div>
+        <br>
+        <div class="col-md-12">
+            <p> 
+      <u>  <label style="font-size: 20px; font-weight: bold; margin-top: 10px; margin-right: 20px;" >Address</label></u>
+       
+            
+            <input type="text" id="address" name="address" value="" placeholder="Enter your address"/>
+            <span id="address-error" class="error-message"></span>
+        </p>
+        </div>
+        <div class="col-md-12">
+        <p>
+          <u> <label>Contact no</label></u>
+            <input type="text" id="contact" name="contact" value="" placeholder="(000) 000-0000">
+            <span id="contact-error" class="error-message"></span>
+        </p>
+        </div>
+        <div class="col-md-6">
+        <p>
+            
+            <input type="reset" value="Reset" name="reset">
+            
+            <input type="submit" value="Submit" name="submit" style="margin-left: 320px;">
+       
+        </p>
+    </div>
+    </form>
+</div>
+<script>
+    function validateForm()
+{
+    const name=document.getElementById("name").value;
+    
+    const address=document.getElementById("address").value;
+    const email=document.getElementById("email").value;
+    const pwd=document.getElementById("pwd").value;
+    const qual=document.getElementById("qual").value;
+    const month=document.getElementById("month").value;
+    const date=document.getElementById("date").value;
+    const year=document.getElementById("year").value;
+    const contact=document.getElementById("contact").value;
+
+    const nameError=document.getElementById("name-error");
+
+    const addressError=document.getElementById("address-error");
+    const emailError=document.getElementById("email-error");
+    const pwdError=document.getElementById("pwd-error");
+    const qualError=document.getElementById("qual-error");
+    const monthError=document.getElementById("month-error");
+    const dateError=document.getElementById("date-error");
+    const yearError=document.getElementById("year-error");
+    const contactError=document.getElementById("contact-error");
+
+    nameError.textContent="";
+    addressError.textContent="";
+    emailError.textContent="";
+    pwdError.textContent="";
+    qualError.textContent="";
+    monthError.textContent="";
+    dateError.textContent="";
+    yearError.textContent="";
+    contactError.textContent="";
+
+    if(name==="" || /\d/.test(name))
+        {
+            //alert("please enter name properly");
+            nameError.textContent="Please enter your name properly";
+            return false;
+        }
+            if(email==="" ||!email.includes("@"))
+                {
+                    //alert("please enter address properly");
+                    emailError.textContent="Please enter your email properly";
+                    return false;
+                }
+                
+                    if (pwd.length < 8) 
+                    {
+       pwdError.textContent=("Your password must be at least 8 characters"); 
+       return false;
+    }
+    if (pwd.search(/[a-z]/i) < 0) {
+        pwdError.textContent=("Your password must contain at least one letter.");
+        return false
+    }
+    if (pwd.search(/[0-9]/) < 0) {
+        pwdError.textContent= ("Your password must contain at least one digit."); 
+        return false;
+    }
+    if (pwd.search(/[A-Z]/) < 0) {
+        pwdError.textContent= ("Your password must contain at least one capital letter."); 
+        return false;
+    }
+                   if(qual==="")
+                    {
+                        qualError.textContent="Please enter your qualification properly";
+                        return false;
+                    }
+                   if(month==="") {
+                    monthError.textContent="Please enter month of your date of birth";
+                    return false;
+                   }
+                   if(date===""){
+                    dateError.textContent="Please enter date of your date of birth";
+                    return false;
+                   }
+                  if(year==="") {
+                    yearError.textContent="Please enter year of your date of birth" ;
+                    return false;
+                  }
+                  if(address==="")
+            {
+                //alert("please enter address properly");
+                addressError.textContent="Please enter your address properly";
+                return false;
+            }
+            if (contact.length<10) 
+                    {
+      contactError.textContent="Your contact must be 10 digits only "; 
+       return false;
+    }
+            
+    if (contact.length>10) 
+                    {
+      contactError.textContent="Your contact must be 10 digits only "; 
+       return false;
+    }  
+   return true;
+}
+
+</script>
+</body>
+</html>
